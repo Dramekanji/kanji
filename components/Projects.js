@@ -15,7 +15,11 @@ const Projects = () => {
         <p className="text-xl tracking-widest uppercase text-[#008080]">
           My Projects
         </p>
-        <h2 className="py-4 text-gray-300">Websites I've Built</h2>
+        <h2 className="py-4 text-gray-300">
+          {" "}
+          {/* eslint-disable react/no-unescaped-entities */}Websites I've Built
+          {/* eslint-enable react/no-unescaped-entities */}
+        </h2>
         <div className="grid md:grid-cols-2 gap-8">
           <ProjectItem
             title="Mansa Nzinga"

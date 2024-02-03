@@ -13,26 +13,34 @@ const About = () => {
           <h2 className="py-4 text-gray-300">A Bit About Me</h2>
           <p className="py-2 text-gray-300">From Film to Code</p>
           <p className="py-2 text-gray-300">
+            {/* eslint-disable react/no-unescaped-entities */}
             I'm Dramé Kanji, a filmmaker moving into the tech world.{" "}
+            {/* eslint-enable react/no-unescaped-entities */}
           </p>
           <p className="py-2 text-gray-300">
+            {/* eslint-disable react/no-unescaped-entities */}
             I'm a Director of Photography turned Developer, blending the art of
             filmmaking with the dynamic world of technology. My journey began
             behind the camera, where I developed the craft of visual
             storytelling, directing, and production. This experience honed my
             eye for detail and passion for creating compelling narratives.
+            {/* eslint-enable react/no-unescaped-entities */}
           </p>
           <p className="py-2 text-gray-300">
+            {/* eslint-disable react/no-unescaped-entities */}
             Now, as I pivot into the tech industry, I bring with me a unique
             perspective shaped by my cinematic background. My goal is to merge
             the creativity of filmmaking with the precision of technology to
             develop unique digital experiences. Whether it's through coding,
             designing, or problem-solving, I am dedicated to exploring the
             limitless possibilities that the fusion of these two worlds offers.
+            {/* eslint-enable react/no-unescaped-entities */}
           </p>
           <p className="py-2 text-gray-300">
+            {/* eslint-disable react/no-unescaped-entities */}
             Join me on this exciting journey as I navigate the tech world,
             bringing my touch of creativity to your projects.
+            {/* eslint-enable react/no-unescaped-entities */}
           </p>
           <Link href="#projects">
             <p className="py-2 text-gray-300 underline cursor-pointer">

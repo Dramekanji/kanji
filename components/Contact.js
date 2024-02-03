@@ -69,8 +69,10 @@ const Contact = () => {
                 <h2 className="py-2">Dramé Kanji</h2>
                 <p>Web | Software Developer</p>
                 <p>
+                  {/* eslint-disable react/no-unescaped-entities */}
                   I'm available for freelance and full-time positions. Feel free
                   to get in touch.
+                  {/* eslint-enable react/no-unescaped-entities */}
                 </p>
               </div>
               <div>
@@ -115,7 +117,9 @@ const Contact = () => {
             <div className="p-4">
               {submitSuccess ? (
                 <div className="text-center text-white text-4xl">
+                  {/* eslint-disable react/no-unescaped-entities */}
                   Thank you! We'll be in touch soon.
+                  {/* eslint-enable react/no-unescaped-entities */}
                 </div>
               ) : (
                 <form onSubmit={handleSubmit}>

@@ -14,14 +14,14 @@ const About = () => {
           <p className="py-2 text-gray-300">From Film to Code</p>
           <p className="py-2 text-gray-300">
             {/* eslint-disable react/no-unescaped-entities */}
-            I'm Dramé Kanji, a filmmaker moving into the tech world.{" "}
+            I&apos;m Dramé Kanji, a filmmaker moving into the tech world.{" "}
             {/* eslint-enable react/no-unescaped-entities */}
           </p>
           <p className="py-2 text-gray-300">
             {/* eslint-disable react/no-unescaped-entities */}
-            I'm a Director of Photography turned Developer, blending the art of
-            filmmaking with the dynamic world of technology. My journey began
-            behind the camera, where I developed the craft of visual
+            I&apos;m a Director of Photography turned Developer, blending the
+            art of filmmaking with the dynamic world of technology. My journey
+            began behind the camera, where I developed the craft of visual
             storytelling, directing, and production. This experience honed my
             eye for detail and passion for creating compelling narratives.
             {/* eslint-enable react/no-unescaped-entities */}
@@ -31,9 +31,10 @@ const About = () => {
             Now, as I pivot into the tech industry, I bring with me a unique
             perspective shaped by my cinematic background. My goal is to merge
             the creativity of filmmaking with the precision of technology to
-            develop unique digital experiences. Whether it's through coding,
-            designing, or problem-solving, I am dedicated to exploring the
-            limitless possibilities that the fusion of these two worlds offers.
+            develop unique digital experiences. Whether it&apos;s through
+            coding, designing, or problem-solving, I am dedicated to exploring
+            the limitless possibilities that the fusion of these two worlds
+            offers.
             {/* eslint-enable react/no-unescaped-entities */}
           </p>
           <p className="py-2 text-gray-300">

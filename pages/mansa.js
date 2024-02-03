@@ -27,13 +27,11 @@ const mansaPage = () => {
           <h2 className="py-4 text-[#008080]">Overview</h2>
           <p>
             {" "}
-            {/* eslint-disable react/no-unescaped-entities */}
-            This app is was built with Next JS and hosted on Vercel. It's for
-            Mansa Nzinga, an independent film production company based in Los
-            Angeles, Califoria. This app allows for customers who are interested
-            in working with Mansa Nzinga to see their previous work and also get
-            in touch with them in order to work with them.{" "}
-            {/* eslint-enable react/no-unescaped-entities */}
+            This app is was built with Next JS and hosted on Vercel. It&apos;s
+            for Mansa Nzinga, an independent film production company based in
+            Los Angeles, Califoria. This app allows for customers who are
+            interested in working with Mansa Nzinga to see their previous work
+            and also get in touch with them in order to work with them.{" "}
           </p>
         </div>
         <div className="col-span-4 md:col-span-1 shadow-xl shadow-black rounded-xl py-4">

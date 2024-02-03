@@ -9,22 +9,19 @@ const Main = () => {
       <div className="max-w-[1240px] w-full h-full m-auto mx-auto  p-2 flex justify-center items-center">
         <div>
           <p className="uppercase tracking-widest text-[#ABB2B9] mt-32">
-            Let's grow your business
+            Let&apos;s grow your business
           </p>
           <h1 className="py-4 text-gray-300">
-            Hi, I'm <span className="text-[#008080]">Kanji</span>
+            Hi, I&apos;m <span className="text-[#008080]">Kanji</span>
           </h1>
           <h1 className="py-2 text-gray-300">
-            {/* eslint-disable react/no-unescaped-entities */}I'm a Web |
-            Software Developer {/* eslint-enable react/no-unescaped-entities */}
+            I&apos;m a Web | Software Developer
           </h1>
           <p className="py-4 text-gray-300 max-w-[70%]  m-auto">
-            {/* eslint-disable react/no-unescaped-entities */}
             Fully committed to creating innovative solutions that will grow your
-            business. Outside of developing applications, I'm focused on
+            business. Outside of developing applications, I&apos;m focused on
             learning new technologies that will take my skills to the next
             level.
-            {/* eslint-enable react/no-unescaped-entities */}
           </p>
           <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
             <div className="rounded-full shadow-lg shadow-black p-4 cursor-pointer hover:scale-110 ease-in duration-300">

@@ -88,9 +88,7 @@ const Navbar = () => {
             </div>
             <div className="border-b border-gray-300 my-4">
               <p className="w-[85%] md:w-[90%] py-4">
-                {/* eslint-disable react/no-unescaped-entities */}
-                Let's build your brand and grow your business
-                {/* eslint-enable react/no-unescaped-entities */}
+                Let&apos;s build your brand and grow your business
               </p>
             </div>
           </div>

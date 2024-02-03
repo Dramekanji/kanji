@@ -4,6 +4,7 @@ import mansa from "../public/projects/mansa.png";
 import maf2 from "../public/projects/maf2.png";
 import vdc from "../public/projects/vdc.png";
 import nour from "../public/projects/nour.png";
+import nourlight from "../public/projects/nourlight.png";
 
 import ProjectItem from "./ProjectItem";
 
@@ -14,17 +15,17 @@ const Projects = () => {
         <p className="text-xl tracking-widest uppercase text-[#008080]">
           My Projects
         </p>
-        <h2 className="py-4 text-gray-300">Apps I've Built</h2>
+        <h2 className="py-4 text-gray-300">Websites I've Built</h2>
         <div className="grid md:grid-cols-2 gap-8">
           <ProjectItem
             title="Mansa Nzinga"
             backgroundImg={mansa}
-            projectUrl="/mansa"
+            projectUrl="https://www.mansanzingaproductions.com/"
           />
           <ProjectItem
             title="Maf Village"
             backgroundImg={maf2}
-            projectUrl="/maf"
+            projectUrl="https://maf-village.vercel.app"
           />
           <ProjectItem
             title="VDC Telecom"
@@ -33,8 +34,8 @@ const Projects = () => {
           />
           <ProjectItem
             title="Nour Light "
-            backgroundImg={nour}
-            projectUrl="/mansa"
+            backgroundImg={nourlight}
+            projectUrl="https://nour-light-v2.vercel.app/"
           />
         </div>
       </div>

@@ -13,7 +13,6 @@ export default function Home() {
       <Head>
         <title>Kanji Portfolio</title>
       </Head>
-      <Navbar />
       <Main />
       <About />
       <Skills />

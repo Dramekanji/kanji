@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import Link from "next/link";
 
 const About = () => {
   return (
@@ -33,9 +34,11 @@ const About = () => {
             Join me on this exciting journey as I navigate the tech world,
             bringing my touch of creativity to your projects.
           </p>
-          <p className="py-2 text-gray-300 underline cursor-pointer">
-            Take a look at some of my projects.
-          </p>
+          <Link href="#projects">
+            <p className="py-2 text-gray-300 underline cursor-pointer">
+              Take a look at some of my projects.
+            </p>
+          </Link>
         </div>
         <div className="w-full bg-[#008080] h-auto m-auto shadow-xl rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300">
           <Image

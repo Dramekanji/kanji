@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
@@ -5,9 +6,9 @@ import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 const Main = () => {
   return (
     <div id="home" className="w-full h-screen text-center">
-      <div className="max-w-[1240px] w-full h-full m-auto mx-auto p-2 flex justify-center items-center">
+      <div className="max-w-[1240px] w-full h-full m-auto mx-auto  p-2 flex justify-center items-center">
         <div>
-          <p className="uppercase tracking-widest text-[#ABB2B9]">
+          <p className="uppercase tracking-widest text-[#ABB2B9] mt-32">
             Let's grow your business
           </p>
           <h1 className="py-4 text-gray-300">
@@ -21,17 +22,37 @@ const Main = () => {
             level.
           </p>
           <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
-            <div className="rounded-full shadow-lg shadow-gray-950  p-8 cursor-pointer hover:scale-125 ease-in duration-300 mr-8">
-              <FaLinkedinIn />
+            <div className="rounded-full shadow-lg shadow-black p-4 cursor-pointer hover:scale-110 ease-in duration-300">
+              <Link
+                href="https://www.linkedin.com/in/dram%C3%A9-kanji-francina-443ba792/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <FaLinkedinIn size={30} />
+              </Link>
             </div>{" "}
-            <div className="rounded-full shadow-lg shadow-gray-950  p-8 cursor-pointer hover:scale-125 ease-in duration-300 mr-8">
-              <FaGithub />
+            <div className="rounded-full shadow-lg shadow-black p-4 cursor-pinter hover:scale-110 ease-in duration-300">
+              <Link
+                href="https://github.com/Dramekanji"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <FaGithub size={30} />
+              </Link>
             </div>{" "}
-            <div className="rounded-full shadow-lg shadow-gray-950  p-8 cursor-pointer hover:scale-125 ease-in duration-300 mr-8">
-              <FaInstagram />
+            <div className="rounded-full shadow-lg shadow-black p-4 cursor-pointer hover:scale-110 ease-in duration-300">
+              <Link
+                href="https://www.instagram.com/kanjifrancina"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <FaInstagram size={30} />
+              </Link>
             </div>{" "}
-            <div className="rounded-full shadow-lg shadow-gray-950  p-8 cursor-pointer hover:scale-125 ease-in duration-300 mr-8">
-              <AiOutlineMail />
+            <div className="rounded-full shadow-lg shadow-black p-4 cursor-pointer hover:scale-110 ease-in duration-300">
+              <Link href="#contact">
+                <AiOutlineMail size={30} />
+              </Link>
             </div>
           </div>
         </div>

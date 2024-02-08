@@ -124,17 +124,35 @@ const Navbar = () => {
               <p className="uppercase tracking-widest ">Get In Touch</p>
               <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
                 <div className="rounded-full shadow-lg shadow-gray-950 p-4 cursor-pointer hover:scale-125 ease-in duration-300">
-                  <FaLinkedinIn />
+                  <Link
+                    href="https://www.linkedin.com/in/dram%C3%A9-kanji-francina-443ba792/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <FaLinkedinIn />
+                  </Link>
                 </div>
                 <div className="rounded-full shadow-lg shadow-gray-950  p-4 cursor-pointer hover:scale-125 ease-in duration-300">
-                  <FaGithub />
+                  <Link
+                    href="https://github.com/Dramekanji"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <FaGithub />
+                  </Link>
                 </div>
                 <div className="rounded-full shadow-lg shadow-gray-950  p-4 cursor-pointer hover:scale-125 ease-in duration-300">
-                  <FaInstagram />
+                  <Link
+                    href="https://www.instagram.com/kanjifrancina"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <FaInstagram />
+                  </Link>
                 </div>
-                <div className="rounded-full shadow-lg shadow-gray-950  p-4 cursor-pointer hover:scale-125 ease-in duration-300">
+                {/* <div className="rounded-full shadow-lg shadow-gray-950  p-4 cursor-pointer hover:scale-125 ease-in duration-300">
                   <AiOutlineMail />
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

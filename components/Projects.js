@@ -20,7 +20,7 @@ const Projects = () => {
           <ProjectItem
             title="Mansa Nzinga"
             backgroundImg={mansa}
-            projectUrl="https://www.mansanzingaproductions.com/"
+            projectUrl="https://mansa-orpin.vercel.app/"
           />
           <ProjectItem
             title="Maf Village"
@@ -30,7 +30,7 @@ const Projects = () => {
           <ProjectItem
             title="VDC Telecom"
             backgroundImg={vdc}
-            projectUrl="/vdc"
+            projectUrl="https://vdc-6m7csjjqq-dramekanjis-projects.vercel.app/"
           />
           <ProjectItem
             title="Nour Light "

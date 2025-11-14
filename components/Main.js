@@ -10,7 +10,7 @@ const Main = () => {
   return (
     <motion.section
       id="home"
-      className="mobile-screen min-h-screen flex items-center px-8 md:px-16 lg:px-20"
+      className="mobile-screen min-h-screen flex items-center px-8 md:px-16 lg:px-20 pt-28 md:pt-0"
       initial="hidden"
       animate="visible"
       variants={staggerChildren}

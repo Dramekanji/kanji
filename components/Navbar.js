@@ -63,6 +63,12 @@ const Navbar = () => {
             <Link href="/#projects" className="text-base hover:opacity-70 transition-opacity">
               Projects
             </Link>
+            <Link
+              href="/#contact"
+              className="text-base font-medium text-center border border-black px-6 py-2.5 rounded-lg hover:bg-black hover:text-white transition-all duration-300"
+            >
+              Contact
+            </Link>
           </div>
 
           {/* Mobile Menu Icon - Animated */}

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { AiOutlineMail } from "react-icons/ai";
 import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { fadeInUp, staggerChildren } from "@/utils/motion";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -43,25 +44,38 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-32 md:py-40 px-8 md:px-16 lg:px-20 bg-white">
+    <motion.section
+      id="contact"
+      className="py-32 md:py-40 px-8 md:px-16 lg:px-20 bg-white"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={fadeInUp}
+    >
       <div className="max-w-[900px] mx-auto">
-        <h2 className="text-section-mobile md:text-section font-medium mb-16">
+        <motion.h2
+          className="text-section-mobile md:text-section font-medium mb-16"
+          variants={fadeInUp}
+        >
           Get In Touch
-        </h2>
+        </motion.h2>
 
         {submitSuccess ? (
-          <div className="text-center py-20">
+          <motion.div className="text-center py-20" variants={fadeInUp}>
             <p className="text-2xl md:text-3xl font-medium mb-4">
               Thank you for reaching out!
             </p>
             <p className="text-lg text-gray-dark">
               I&apos;ll get back to you as soon as possible.
             </p>
-          </div>
+          </motion.div>
         ) : (
-          <div className="grid lg:grid-cols-2 gap-16">
+          <motion.div
+            className="grid lg:grid-cols-2 gap-16"
+            variants={staggerChildren}
+          >
             {/* Left: Info */}
-            <div className="space-y-8">
+            <motion.div className="space-y-8" variants={fadeInUp}>
               <div>
                 <p className="text-lg text-gray-dark leading-relaxed mb-8">
                   I&apos;m available for freelance work and full-time positions. Whether you have a project in mind or just want to connect, feel free to reach out.
@@ -100,12 +114,16 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* Right: Form */}
-            <div>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
+            <motion.div variants={fadeInUp}>
+              <motion.form
+                onSubmit={handleSubmit}
+                className="space-y-6"
+                variants={staggerChildren}
+              >
+                <motion.div variants={fadeInUp}>
                   <label className="block text-sm font-medium mb-2">Name</label>
                   <input
                     name="name"
@@ -114,9 +132,9 @@ const Contact = () => {
                     type="text"
                     required
                   />
-                </div>
+                </motion.div>
 
-                <div>
+                <motion.div variants={fadeInUp}>
                   <label className="block text-sm font-medium mb-2">Email</label>
                   <input
                     name="email"
@@ -125,9 +143,9 @@ const Contact = () => {
                     type="email"
                     required
                   />
-                </div>
+                </motion.div>
 
-                <div>
+                <motion.div variants={fadeInUp}>
                   <label className="block text-sm font-medium mb-2">Subject</label>
                   <input
                     name="subject"
@@ -136,9 +154,9 @@ const Contact = () => {
                     type="text"
                     required
                   />
-                </div>
+                </motion.div>
 
-                <div>
+                <motion.div variants={fadeInUp}>
                   <label className="block text-sm font-medium mb-2">Message</label>
                   <textarea
                     name="message"
@@ -147,21 +165,26 @@ const Contact = () => {
                     rows={6}
                     required
                   ></textarea>
-                </div>
+                </motion.div>
 
-                <button
-                  type="submit"
-                  className="w-full bg-black text-white px-8 py-4 rounded-lg hover:opacity-90 transition-opacity font-medium"
-                >
-                  Send Message
-                </button>
-              </form>
-            </div>
-          </div>
+                <motion.div variants={fadeInUp}>
+                  <button
+                    type="submit"
+                    className="w-full bg-black text-white px-8 py-4 rounded-lg hover:opacity-90 transition-opacity font-medium"
+                  >
+                    Send Message
+                  </button>
+                </motion.div>
+              </motion.form>
+            </motion.div>
+          </motion.div>
         )}
 
         {/* Footer */}
-        <div className="mt-32 pt-12 border-t border-gray-border">
+        <motion.div
+          className="mt-32 pt-12 border-t border-gray-border"
+          variants={fadeInUp}
+        >
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-gray-dark">
               © 2024 Dramé Kanji. All rights reserved.
@@ -170,9 +193,9 @@ const Contact = () => {
               Back to top ↑
             </Link>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

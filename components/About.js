@@ -2,15 +2,18 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { fadeInUp, staggerChildren } from "@/utils/motion";
+import useSectionAnimation from "@/hooks/useSectionAnimation";
 
 const About = () => {
+  const { ref, controls } = useSectionAnimation();
+
   return (
     <motion.section
+      ref={ref}
       id="about"
       className="py-32 md:py-40 px-8 md:px-16 lg:px-20"
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
+      animate={controls}
       variants={fadeInUp}
     >
       <div className="max-w-[900px] mx-auto">

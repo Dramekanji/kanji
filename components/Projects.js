@@ -9,15 +9,18 @@ import { motion } from "framer-motion";
 
 import ProjectItem from "./ProjectItem";
 import { fadeInUp, staggerChildren } from "@/utils/motion";
+import useSectionAnimation from "@/hooks/useSectionAnimation";
 
 const Projects = () => {
+  const { ref, controls } = useSectionAnimation({ once: true, margin: "-15%" });
+
   return (
     <motion.section
+      ref={ref}
       id="projects"
       className="py-32 md:py-40 px-8 md:px-16 lg:px-20"
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
+      animate={controls}
       variants={fadeInUp}
     >
       <div className="max-w-[1440px] mx-auto">

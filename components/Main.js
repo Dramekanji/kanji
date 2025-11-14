@@ -3,43 +3,10 @@ import React from "react";
 import Image from "next/image";
 import { AiOutlineMail } from "react-icons/ai";
 import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 import { fadeInUp, scaleIn, staggerChildren } from "@/utils/motion";
-import { useMemo } from "react";
 
 const Main = () => {
-  const prefersReducedMotion = useReducedMotion();
-  const spinAnimation = useMemo(
-    () =>
-      prefersReducedMotion
-        ? {}
-        : {
-            rotate: 360,
-            transition: {
-              repeat: Infinity,
-              repeatType: "mirror",
-              duration: 26,
-              ease: "linear",
-            },
-          },
-    [prefersReducedMotion]
-  );
-  const outerSpinAnimation = useMemo(
-    () =>
-      prefersReducedMotion
-        ? {}
-        : {
-            rotate: -360,
-            transition: {
-              repeat: Infinity,
-              repeatType: "mirror",
-              duration: 32,
-              ease: "linear",
-            },
-          },
-    [prefersReducedMotion]
-  );
-
   return (
     <motion.section
       id="home"
@@ -131,7 +98,6 @@ const Main = () => {
               {/* Outer decorative circle */}
               <motion.div
                 className="absolute inset-0 rounded-full border-2 border-gray-border"
-                animate={spinAnimation}
               >
                 <span className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-black" />
               </motion.div>
@@ -139,7 +105,6 @@ const Main = () => {
               {/* Outer orbiting circle */}
               <motion.div
                 className="absolute inset-[-24px] rounded-full border-2 border-gray-border/70"
-                animate={outerSpinAnimation}
               >
                 <span className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-black" />
               </motion.div>

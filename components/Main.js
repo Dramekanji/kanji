@@ -96,18 +96,14 @@ const Main = () => {
           >
             <div className="relative w-full max-w-md lg:max-w-lg aspect-square">
               {/* Outer decorative circle */}
-              <motion.div
-                className="absolute inset-0 rounded-full border-2 border-gray-border"
-              >
+              <div className="absolute inset-0 rounded-full border-2 border-gray-border animate-orbit">
                 <span className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-black" />
-              </motion.div>
+              </div>
 
               {/* Outer orbiting circle */}
-              <motion.div
-                className="absolute inset-[-24px] rounded-full border-2 border-gray-border/70"
-              >
+              <div className="absolute inset-[-24px] rounded-full border-2 border-gray-border/70 animate-orbit-reverse">
                 <span className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-black" />
-              </motion.div>
+              </div>
 
               {/* Inner circle with image */}
               <div className="absolute inset-8 rounded-full overflow-hidden">

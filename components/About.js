@@ -1,65 +1,42 @@
-import Image from "next/image";
 import React from "react";
 import Link from "next/link";
 
 const About = () => {
   return (
-    <div id="about" className="w-full md:h-screen p-2 flex items-center py-16">
-      <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8">
-        <div className="col-span-2">
-          <p className="uppercase text-xl tracking-widest text-[#008080]">
-            About
+    <section id="about" className="py-32 md:py-40 px-8 md:px-16 lg:px-20">
+      <div className="max-w-[900px] mx-auto">
+        <h2 className="text-section-mobile md:text-section font-medium mb-16">
+          About
+        </h2>
+
+        <div className="space-y-6 text-lg md:text-xl leading-relaxed">
+          <p className="text-gray-dark">
+            I'm Dramé Kanji, a filmmaker transitioning into the tech world.
           </p>
-          <h2 className="py-4 text-gray-300">A Bit About Me</h2>
-          <p className="py-2 text-gray-300">From Film to Code</p>
-          <p className="py-2 text-gray-300">
-            {/* eslint-disable react/no-unescaped-entities */}
-            I&apos;m Dramé Kanji, a filmmaker moving into the tech world.{" "}
-            {/* eslint-enable react/no-unescaped-entities */}
+
+          <p className="text-gray-dark">
+            As a Director of Photography turned Developer, I blend the art of filmmaking with the dynamic world of technology. My journey began behind the camera, where I developed the craft of visual storytelling, directing, and production. This experience honed my eye for detail and passion for creating compelling narratives.
           </p>
-          <p className="py-2 text-gray-300">
-            {/* eslint-disable react/no-unescaped-entities */}
-            I&apos;m a Director of Photography turned Developer, blending the
-            art of filmmaking with the dynamic world of technology. My journey
-            began behind the camera, where I developed the craft of visual
-            storytelling, directing, and production. This experience honed my
-            eye for detail and passion for creating compelling narratives.
-            {/* eslint-enable react/no-unescaped-entities */}
+
+          <p className="text-gray-dark">
+            Now, as I pivot into the tech industry, I bring with me a unique perspective shaped by my cinematic background. My goal is to merge the creativity of filmmaking with the precision of technology to develop unique digital experiences. Whether it's through coding, designing, or problem-solving, I am dedicated to exploring the limitless possibilities that the fusion of these two worlds offers.
           </p>
-          <p className="py-2 text-gray-300">
-            {/* eslint-disable react/no-unescaped-entities */}
-            Now, as I pivot into the tech industry, I bring with me a unique
-            perspective shaped by my cinematic background. My goal is to merge
-            the creativity of filmmaking with the precision of technology to
-            develop unique digital experiences. Whether it&apos;s through
-            coding, designing, or problem-solving, I am dedicated to exploring
-            the limitless possibilities that the fusion of these two worlds
-            offers.
-            {/* eslint-enable react/no-unescaped-entities */}
+
+          <p className="text-gray-dark">
+            Join me on this exciting journey as I navigate the tech world, bringing my touch of creativity to your projects.
           </p>
-          <p className="py-2 text-gray-300">
-            {/* eslint-disable react/no-unescaped-entities */}
-            Join me on this exciting journey as I navigate the tech world,
-            bringing my touch of creativity to your projects.
-            {/* eslint-enable react/no-unescaped-entities */}
-          </p>
-          <Link href="#projects">
-            <p className="py-2 text-gray-300 underline cursor-pointer">
-              Take a look at some of my projects.
-            </p>
-          </Link>
-        </div>
-        <div className="w-full bg-[#008080] h-auto m-auto shadow-xl rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300">
-          <Image
-            src="/assets/images/kanjidevpp.JPG"
-            alt="/"
-            width={300}
-            height={200}
-            className="rounded-xl"
-          />
+
+          <div className="pt-8">
+            <Link
+              href="#projects"
+              className="inline-flex items-center text-black hover:opacity-70 transition-opacity font-medium"
+            >
+              View my work →
+            </Link>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

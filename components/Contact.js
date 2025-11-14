@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import Image from "next/image";
 import { AiOutlineMail } from "react-icons/ai";
 import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import Link from "next/link";
-import { PiFlowerLotusFill } from "react-icons/pi";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -34,8 +32,7 @@ const Contact = () => {
 
       const data = await response.json();
       if (data.status === "Ok") {
-        setSubmitSuccess(true); // Set success state to true
-        // Optionally reset form fields here
+        setSubmitSuccess(true);
       } else {
         throw new Error(data.message);
       }
@@ -46,150 +43,136 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="w-full lg:h-screen">
-      <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
-        <p className="text-xl tracking-widest uppercase text-[#008080]">
-          Contact
-        </p>
-        <h2 className="py-4 text-gray-300">Get In Touch</h2>
-        <div className="grid lg:grid-cols-5 gap-8">
-          {/* Left Section */}
-          <div className="col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-black rounded-xl p-4">
-            <div className="lg:p-4 h-full">
-              <div className="flex justify-center items-center">
-                <Image
-                  src="/assets/images/contact-img.png"
-                  alt="/"
-                  width={500}
-                  height={200}
-                  className="rounded-xl hover:scale-105 ease-in duration-300"
-                />
-              </div>
+    <section id="contact" className="py-32 md:py-40 px-8 md:px-16 lg:px-20 bg-white">
+      <div className="max-w-[900px] mx-auto">
+        <h2 className="text-section-mobile md:text-section font-medium mb-16">
+          Get In Touch
+        </h2>
+
+        {submitSuccess ? (
+          <div className="text-center py-20">
+            <p className="text-2xl md:text-3xl font-medium mb-4">
+              Thank you for reaching out!
+            </p>
+            <p className="text-lg text-gray-dark">
+              I'll get back to you as soon as possible.
+            </p>
+          </div>
+        ) : (
+          <div className="grid lg:grid-cols-2 gap-16">
+            {/* Left: Info */}
+            <div className="space-y-8">
               <div>
-                <h2 className="py-2">Dramé Kanji</h2>
-                <p>Web | Software Developer</p>
-                <p>
-                  {/* eslint-disable react/no-unescaped-entities */}
-                  I&apos;m available for freelance and full-time positions. Feel
-                  free to get in touch.
-                  {/* eslint-enable react/no-unescaped-entities */}
+                <p className="text-lg text-gray-dark leading-relaxed mb-8">
+                  I'm available for freelance work and full-time positions. Whether you have a project in mind or just want to connect, feel free to reach out.
                 </p>
-              </div>
-              <div>
-                <p className="uppercase pt-8">Connect with Me</p>
-                <div className="flex items-center justify-between py-4">
-                  <div className="rounded-full shadow-lg shadow-gray-950 p-8 cursor-pointer hover:scale-125 ease-in duration-300 mr-8">
+
+                <div className="space-y-4">
+                  <h3 className="text-xl font-medium">Connect with me</h3>
+                  <div className="flex items-center gap-6">
                     <Link
                       href="https://www.linkedin.com/in/dram%C3%A9-kanji-francina-443ba792/"
                       rel="noopener noreferrer"
                       target="_blank"
+                      className="hover:opacity-70 transition-opacity"
+                      aria-label="LinkedIn"
                     >
-                      <FaLinkedinIn />
+                      <FaLinkedinIn size={24} />
                     </Link>
-                  </div>
-                  <div className="rounded-full shadow-lg shadow-gray-950 p-8 cursor-pointer hover:scale-125 ease-in duration-300 mr-8">
                     <Link
                       href="https://github.com/Dramekanji"
                       rel="noopener noreferrer"
                       target="_blank"
+                      className="hover:opacity-70 transition-opacity"
+                      aria-label="GitHub"
                     >
-                      <FaGithub />
+                      <FaGithub size={24} />
                     </Link>
-                  </div>
-                  <div className="rounded-full shadow-lg shadow-gray-950 p-8 cursor-pointer hover:scale-125 ease-in duration-300 mr-8">
                     <Link
                       href="https://www.instagram.com/kanjifrancina"
                       rel="noopener noreferrer"
                       target="_blank"
+                      className="hover:opacity-70 transition-opacity"
+                      aria-label="Instagram"
                     >
-                      <FaInstagram />
+                      <FaInstagram size={24} />
                     </Link>
                   </div>
-                  {/* <div className="rounded-full shadow-lg shadow-gray-950 p-8 cursor-pointer hover:scale-125 ease-in duration-300 mr-8">
-                    <AiOutlineMail />
-                  </div> */}
                 </div>
               </div>
             </div>
-          </div>
-          {/* Right Section */}
-          <div className="col-span-3 w-full h-auto shadow-xl shadow-black rounded-xl lg:p-4">
-            <div className="p-4">
-              {submitSuccess ? (
-                <div className="text-center text-white text-4xl">
-                  Thank you! We&apos;ll be in touch soon.
+
+            {/* Right: Form */}
+            <div>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label className="block text-sm font-medium mb-2">Name</label>
+                  <input
+                    name="name"
+                    onChange={handleChange}
+                    className="w-full border border-gray-border rounded-lg p-4 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition-all"
+                    type="text"
+                    required
+                  />
                 </div>
-              ) : (
-                <form onSubmit={handleSubmit}>
-                  <div className="grid md:grid-cols-2 gap-4 w-full py-2">
-                    <div className="flex flex-col">
-                      <label className="uppercase text-sm py-2">Name</label>
-                      <input
-                        name="name"
-                        onChange={handleChange}
-                        className="border-2 rounded-lg p-3 flex border-[#008080] text-black"
-                        type="text"
-                      />
-                    </div>
-                    <div className="flex flex-col">
-                      <label className="uppercase text-sm py-2">
-                        Phone Number
-                      </label>
-                      <input
-                        name="phoneNumber"
-                        onChange={handleChange}
-                        className="border-2 rounded-lg p-3 flex border-[#008080] text-black"
-                        type="text"
-                      />
-                    </div>
-                  </div>
-                  <div className="flex flex-col py-2">
-                    <label className="uppercase text-sm py-2">Email</label>
-                    <input
-                      name="email"
-                      onChange={handleChange}
-                      className="border-2 rounded-lg p-3 flex border-[#008080] text-black"
-                      type="email"
-                    />
-                  </div>
-                  <div className="flex flex-col py-2">
-                    <label className="uppercase text-sm py-2">Subject</label>
-                    <input
-                      name="subject"
-                      onChange={handleChange}
-                      className="border-2 rounded-lg p-3 flex border-[#008080] text-black"
-                      type="text"
-                    />
-                  </div>
-                  <div className="flex flex-col py-2">
-                    <label className="uppercase text-sm py-2">Message</label>
-                    <textarea
-                      name="message"
-                      onChange={handleChange}
-                      className="border-2 rounded-lg p-3 border-[#008080] text-black"
-                      rows={10}
-                    ></textarea>
-                  </div>
-                  <button
-                    type="submit"
-                    className="w-full p-4 text-white mt-5 hover:bg-[#4DD0E1]"
-                  >
-                    Send Message
-                  </button>
-                </form>
-              )}
+
+                <div>
+                  <label className="block text-sm font-medium mb-2">Email</label>
+                  <input
+                    name="email"
+                    onChange={handleChange}
+                    className="w-full border border-gray-border rounded-lg p-4 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition-all"
+                    type="email"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium mb-2">Subject</label>
+                  <input
+                    name="subject"
+                    onChange={handleChange}
+                    className="w-full border border-gray-border rounded-lg p-4 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition-all"
+                    type="text"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium mb-2">Message</label>
+                  <textarea
+                    name="message"
+                    onChange={handleChange}
+                    className="w-full border border-gray-border rounded-lg p-4 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition-all resize-none"
+                    rows={6}
+                    required
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full bg-black text-white px-8 py-4 rounded-lg hover:opacity-90 transition-opacity font-medium"
+                >
+                  Send Message
+                </button>
+              </form>
             </div>
           </div>
-        </div>
-        <div className="flex justify-center py-12 mt-6 ml-40">
-          <Link href="/">
-            <div className="rounded-full shadow-lg shadow-gray-950 bg-[#008080] p-4 cursor-pointer hover:scale-110 ease-in duration-300 mr-8">
-              <PiFlowerLotusFill className="m-auto" size={50} />
-            </div>
-          </Link>
+        )}
+
+        {/* Footer */}
+        <div className="mt-32 pt-12 border-t border-gray-border">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-sm text-gray-dark">
+              © 2024 Dramé Kanji. All rights reserved.
+            </p>
+            <Link href="#home" className="text-sm hover:opacity-70 transition-opacity">
+              Back to top ↑
+            </Link>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -8,7 +8,7 @@ html {
 
 @layer base {
   body {
-    @apply bg-[#252424] text-[#ECF0F3] tracking-wide;
+    @apply bg-gray-light text-black antialiased;
   }
 
   h1,
@@ -17,14 +17,23 @@ html {
   h4,
   h5,
   h6 {
-    @apply font-bold;
+    @apply font-medium;
   }
+
   h1 {
-    @apply text-4xl sm:text-5xl md:text-6xl;
+    @apply text-display-mobile md:text-display-tablet lg:text-display;
   }
 
   h2 {
-    @apply text-3xl sm:text-4xl;
+    @apply text-section-mobile md:text-section;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+
+  p {
+    @apply leading-relaxed;
   }
 
   li {
@@ -32,6 +41,6 @@ html {
   }
 
   button {
-    @apply shadow-xl shadow-black rounded-xl uppercase bg-gradient-to-r from-[#4DD0E1] to-[#008080]  text-white;
+    @apply bg-black text-white px-8 py-3 rounded-lg hover:opacity-90 transition-opacity duration-300 font-medium;
   }
 }

@@ -5,15 +5,15 @@ import { fadeInUp, staggerChildren } from "@/utils/motion";
 import useSectionAnimation from "@/hooks/useSectionAnimation";
 
 const About = () => {
-  const { ref, controls } = useSectionAnimation();
+  const { ref, controls, shouldAnimate } = useSectionAnimation();
 
   return (
     <motion.section
       ref={ref}
       id="about"
       className="py-32 md:py-40 px-8 md:px-16 lg:px-20"
-      initial="hidden"
-      animate={controls}
+      initial={shouldAnimate ? "hidden" : "visible"}
+      animate={shouldAnimate ? controls : "visible"}
       variants={fadeInUp}
     >
       <div className="max-w-[900px] mx-auto">

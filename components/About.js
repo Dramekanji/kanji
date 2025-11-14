@@ -11,7 +11,7 @@ const About = () => {
 
         <div className="space-y-6 text-lg md:text-xl leading-relaxed">
           <p className="text-gray-dark">
-            I'm Dramé Kanji, a filmmaker transitioning into the tech world.
+            I&apos;m Dramé Kanji, a filmmaker transitioning into the tech world.
           </p>
 
           <p className="text-gray-dark">
@@ -19,7 +19,7 @@ const About = () => {
           </p>
 
           <p className="text-gray-dark">
-            Now, as I pivot into the tech industry, I bring with me a unique perspective shaped by my cinematic background. My goal is to merge the creativity of filmmaking with the precision of technology to develop unique digital experiences. Whether it's through coding, designing, or problem-solving, I am dedicated to exploring the limitless possibilities that the fusion of these two worlds offers.
+            Now, as I pivot into the tech industry, I bring with me a unique perspective shaped by my cinematic background. My goal is to merge the creativity of filmmaking with the precision of technology to develop unique digital experiences. Whether it&apos;s through coding, designing, or problem-solving, I am dedicated to exploring the limitless possibilities that the fusion of these two worlds offers.
           </p>
 
           <p className="text-gray-dark">

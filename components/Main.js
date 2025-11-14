@@ -17,7 +17,7 @@ const Main = () => {
             {/* Main Greeting */}
             <div>
               <h1 className="text-display-mobile md:text-display-tablet lg:text-display font-medium leading-none tracking-tight">
-                Hi, I'm
+                Hi, I&apos;m
               </h1>
               <h1 className="text-display-mobile md:text-display-tablet lg:text-display font-medium leading-none tracking-tight">
                 Kanji

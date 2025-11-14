@@ -55,7 +55,7 @@ const Contact = () => {
               Thank you for reaching out!
             </p>
             <p className="text-lg text-gray-dark">
-              I'll get back to you as soon as possible.
+              I&apos;ll get back to you as soon as possible.
             </p>
           </div>
         ) : (
@@ -64,7 +64,7 @@ const Contact = () => {
             <div className="space-y-8">
               <div>
                 <p className="text-lg text-gray-dark leading-relaxed mb-8">
-                  I'm available for freelance work and full-time positions. Whether you have a project in mind or just want to connect, feel free to reach out.
+                  I&apos;m available for freelance work and full-time positions. Whether you have a project in mind or just want to connect, feel free to reach out.
                 </p>
 
                 <div className="space-y-4">
